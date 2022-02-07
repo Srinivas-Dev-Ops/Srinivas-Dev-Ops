@@ -1,0 +1,726 @@
+Git and GitHub
+--------------
+Git is a modern and widely used distributed version control system. 
+
+Git is an open-source distributed version control system. It is designed to handle minor to major projects with high speed and efficiency. It is developed to co-ordinate the work among the developers. The version control allows us to track and work together with our team members at the same workspace.
+
+Git is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git services. Git can be used privately and publicly.
+
+Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also used as an important distributed version-control tool for the DevOps.
+
+Git is easy to learn, and has fast performance. It is superior to other SCM tools like Subversion, CVS, Perforce, and ClearCase.
+
+
+What is GitHub?
+---------------
+
+GitHub is a Git repository hosting service. GitHub also facilitates with many of its features, such as access control and collaboration. It provides a Web-based graphical interface.
+
+GitHub is an American company. It hosts source code of your project in the form of different programming languages and keeps track of the various changes made by programmers.
+
+It offers both distributed version control and source code management (SCM) functionality of Git. It also facilitates with some collaboration features such as bug tracking, feature requests, task management for every project.
+
+
+Features of GitHub
+
+GitHub is a place where programmers and designers work together. They collaborate, contribute, and fix bugs together. It hosts plenty of open source projects and codes of various programming languages.
+
+Some of its significant features are as follows.
+
+    Collaboration
+    Integrated issue and bug tracking
+    Graphical representation of branches
+    Git repositories hosting
+    Project management
+    Team management
+    Code hosting
+    Track and assign tasks
+    Conversations
+
+Git Version Control System
+--------------------------
+A version control system is a software that tracks changes to a file or set of files over time so that you can recall specific versions later. It also allows you to work together with other programmers.
+
+The version control system is a collection of software tools that help a team to manage changes in a source code. It uses a special kind of database to keep track of every modification to the code.
+
+Developers can compare earlier versions of the code with an older version to fix the mistakes.
+Benefits of the Version Control System
+
+The Version Control System is very helpful and beneficial in software development; developing software without using version control is unsafe. It provides backups for uncertainty. Version control systems offer a speedy interface to developers. It also allows software teams to preserve efficiency and agility according to the team scales to include more developers.
+
+Some key benefits of having a version control system are as follows.
+
+    Complete change history of the file
+    Simultaneously working
+    Branching and merging
+    Traceability
+
+Types of Version Control System
+
+    Localized version Control System
+    Centralized version control systems
+    Distributed version control systems
+
+Localized Version Control Systems
+---------------------------------
+The localized version control method is a common approach because of its simplicity. But this approach leads to a higher chance of error. In this approach, you may forget which directory you're in and accidentally write to the wrong file or copy over files you don't want to.
+
+To deal with this issue, programmers developed local VCSs that had a simple database. Such databases kept all the changes to files under revision control. A local version control system keeps local copies of the files.
+
+The major drawback of Local VCS is that it has a single point of failure.
+
+Centralized Version Control System
+
+The developers needed to collaborate with other developers on other systems. The localized version control system failed in this case. To deal with this problem, Centralized Version Control Systems were developed. 
+
+These systems have a single server that contains the versioned files, and some clients to check out files from a central place.
+
+Centralized version control systems have many benefits, especially over local VCSs.
+
+    Everyone on the system has information about the work what others are doing on the project.
+    Administrators have control over other developers.
+    It is easier to deal with a centralized version control system than a localized version control system.
+    A local version control system facilitates with a server software component which stores and manages the different versions of the files.
+
+It also has the same drawback as in local version control system that it also has a single point of failure.
+Distributed Version Control System
+
+Centralized Version Control System uses a central server to store all the database and team collaboration. But due to single point failure, which means the failure of the central server, developers do not prefer it. Next, the Distributed Version Control System is developed.
+
+In a Distributed Version Control System( Distributed Version Control System such as Git, Mercurial, Bazaar or Darcs), the user has a local copy of a repository. So, the clients don't just check out the latest snapshot of the files even they can fully mirror the repository. The local repository contains all the files and metadata present in the main repository.
+
+DVCS  allows automatic management branching and merging. It speeds up of most operations except pushing and pulling. DVCS enhances the ability to work offline and does not rely on a single location for backups. If any server stops and other systems were collaborating via it, then any of the client repositories could be restored by that server. Every checkout is a full backup of all the data.
+
+These systems do not necessarily depend on a central server to store all the versions of a project file.
+
+
+Git Environment Setup
+
+The environment of any tool consists of elements that support execution with software, hardware, and network configured. It includes operating system settings, hardware configuration, software configuration, test terminals, and other support to perform the operations. It is an essential aspect of any software.
+
+It will help you to understand how to set up Git for first use on various platforms so you can read and write code in no time.
+The Git config command
+
+Git supports a command called git config that lets you get and set configuration variables that control all facets of how Git looks and operates. It is used to set Git configuration values on a global or local project level.
+
+Setting user.name and user.email are the necessary configuration options as your name and email will show up in your commit messages.
+
+Setting username
+
+The username is used by the Git for each commit.
+
+    $ git config --global user.name "Himanshu Dubey"  
+
+Setting email id
+
+The Git uses this email id for each commit.
+
+    $ git config --global user.email  "himanshudubey481@gmail.com"  
+
+There are many other configuration options that the user can set.
+
+Setting editor
+
+You can set the default text editor when Git needs you to type in a message. If you have not selected any of the editors, Git will use your default system's editor.
+
+To select a different text editor, such as Vim,
+
+    $ git config --global core.editor Vim  
+
+Checking Your Settings
+
+You can check your configuration settings; you can use the git config --list command to list all the settings that Git can find at that point.
+
+    $ git config -list  
+
+This command will list all your settings. See the below command line output.
+
+Output
+
+Srinivas-PC-PC MINGW64 ~/Desktop
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge --skip -- %f
+filter.lfs.process=git-lfs filter-process --skip
+filter.lfs.required=true
+credential.helper=manager
+gui.recentrepo=C:/Git
+user.email=srinixyz@abc.com
+user.name=Himanshu Dubey
+
+
+
+You can customize your Git output to view a personalized color theme. The git config can be used to set these color themes.
+
+Color.ui
+
+    $ Git config -global color.ui true  
+
+The default value of color.ui is set as auto, which will apply colors to the immediate terminal output stream. You can set the color value as true, false, auto, and always.
+Git configuration levels
+
+The git config command can accept arguments to specify the configuration level. The following configuration levels are available in the Git config.
+
+    local
+    global
+    system
+
+--local
+
+It is the default level in Git. Git config will write to a local level if no configuration option is given. Local configuration values are stored in .git/config directory as a file.
+
+--global
+
+The global level configuration is user-specific configuration. User-specific means, it is applied to an individual operating system user. Global configuration values are stored in a user's home directory. ~ /.gitconfig on UNIX systems and C:\Users\\.gitconfig on windows as a file format.
+
+--system
+
+The system-level configuration is applied across an entire system. The entire system means all users on an operating system and all repositories. The system-level configuration file stores in a gitconfig file off the system directory. $(prefix)/etc/gitconfig on UNIX systems and C:\ProgramData\Git\config on Windows.
+
+The order of priority of the Git config is local, global, and system, respectively. It means when looking for a configuration value, Git will start at the local level and bubble up to the system level.
+
+
+Git provides powerful functionality to explore it. We need many tools such as commands, command line, Git GUI. Let's understand some essential package tools.
+GitBash
+
+Git Bash is an application for the Windows environment. It is used as Git command line for windows. Git Bash provides an emulation layer for a Git command-line experience. Bash is an abbreviation of Bourne Again Shell. Git package installer contains Bash, bash utilities, and Git on a Windows operating system.
+
+Bash is a standard default shell on Linux and macOS. A shell is a terminal application which is used to create an interface with an operating system through commands.
+
+By default, Git Windows package contains the Git Bash tool. We can access it by right-click on a folder in Windows Explorer
+
+Git Bash Commands
+
+Git Bash comes with some additional commands that are stored in the /usr/bin directory of the Git Bash emulation. Git Bash can provide a robust shell experience on Windows. Git Bash comes with some essential shell commands like Ssh, scp, cat, find.
+
+Git Bash also includes the full set of Git core commands like git clone, git commit, git checkout, git push, and more.
+Git GUI
+
+Git GUI is a powerful alternative to Git BASH. It offers a graphical version of the Git command line function, as well as comprehensive visual diff tools. We can access it by simply right click on a folder or location in windows explorer. Also, we can access it through the command line by typing below command.
+
+    $ git gui  
+
+covered vast terminology and jargon, which can often be difficult for new users, or those who know Git basics but want to become Git masters. So, we need a little explanation of the terminology behind the tools. Let's have a look at the commonly used terms.
+
+Some commonly used terms are:
+Branch
+
+A branch is a version of the repository that diverges from the main working project. It is an essential feature available in most modern version control systems. A Git project can have more than one branch. We can perform many operations on Git branch-like rename, list, delete, etc.
+Checkout
+
+In Git, the term checkout is used for the act of switching between different versions of a target entity. The git checkout command is used to switch between branches in a repository.
+Cherry-Picking
+
+Cherry-picking in Git is meant to apply some commit from one branch into another branch. In case you made a mistake and committed a change into the wrong branch, but do not want to merge the whole branch. You can revert the commit and cherry-pick it on another branch.
+Clone
+
+The git clone is a Git command-line utility. It is used to make a copy of the target repository or clone it. If I want a local copy of my repository from GitHub, this tool allows creating a local copy of that repository on your local directory from the repository URL.
+Fetch
+
+It is used to fetch branches and tags from one or more other repositories, along with the objects necessary to complete their histories. It updates the remote-tracking branches.
+HEAD
+
+HEAD is the representation of the last commit in the current checkout branch. We can think of the head like a current branch. When you switch branches with git checkout, the HEAD revision changes, and points the new branch.
+Index
+
+The Git index is a staging area between the working directory and repository. It is used as the index to build up a set of changes that you want to commit together.
+Master
+
+Master is a naming convention for Git branch. It's a default branch of Git. After cloning a project from a remote server, the resulting local repository contains only a single local branch. This branch is called a "master" branch. It means that "master" is a repository's "default" branch.
+Merge
+
+Merging is a process to put a forked history back together. The git merge command facilitates you to take the data created by git branch and integrate them into a single branch.
+Origin
+
+In Git, "origin" is a reference to the remote repository from a project was initially cloned. More precisely, it is used instead of that original repository URL to make referencing much easier.
+Pull/Pull Request
+
+The term Pull is used to receive data from GitHub. It fetches and merges changes on the remote server to your working directory. The git pull command is used to make a Git pull.
+
+Pull requests are a process for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch.
+Push
+
+The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.
+Rebase
+
+In Git, the term rebase is referred to as the process of moving or combining a sequence of commits to a new base commit. Rebasing is very beneficial and visualized the process in the environment of a feature branching workflow.
+
+From a content perception, rebasing is a technique of changing the base of your branch from one commit to another.
+Remote
+
+In Git, the term remote is concerned with the remote repository. It is a shared repository that all team members use to exchange their changes. A remote repository is stored on a code hosting service like an internal server, GitHub, Subversion and more.
+
+In case of a local repository, a remote typically does not provide a file tree of the project's current state, as an alternative it only consists of the .git versioning data.
+Repository
+
+In Git, Repository is like a data structure used by VCS to store metadata for a set of files and directories. It contains the collection of the file as well as the history of changes made to those files. Repositories in Git is considered as your project folder. A repository has all the project-related data. Distinct projects have distinct repositories.
+Stashing
+
+Sometimes you want to switch the branches, but you are working on an incomplete part of your current project. You don't want to make a commit of half-done work. Git stashing allows you to do so. The git stash command enables you to switch branch without committing the current branch.
+Tag
+
+Tags make a point as a specific point in Git history. It is used to mark a commit stage as important. We can tag a commit for future reference. Primarily, it is used to mark a projects initial point like v1.1. There are two types of tags.
+
+    Light-weighted tag
+    Annotated tag
+
+Upstream And Downstream
+
+The term upstream and downstream is a reference of the repository. Generally, upstream is where you cloned the repository from (the origin) and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.
+Git Revert
+
+In Git, the term revert is used to revert some commit. To revert a commit, git revert command is used. It is an undo type command. However, it is not a traditional undo alternative.
+Git Reset
+
+In Git, the term reset stands for undoing changes. The git reset command is used to reset the changes. The git reset command has three core forms of invocation. These forms are as follows.
+
+    Soft
+    Mixed
+    Hard
+
+Git Ignore
+
+In Git, the term ignore used to specify intentionally untracked files that Git should ignore. It doesn't affect the Files that already tracked by Git.
+Git Diff
+
+Git diff is a command-line utility. It's a multiuse Git command. When it is executed, it runs a diff function on Git data sources. These data sources can be files, branches, commits, and more. It is used to show changes between commits, commit, and working tree, etc.
+Git Cheat Sheet
+
+A Git cheat sheet is a summary of Git quick references. It contains basic Git commands with quick installation. A cheat sheet or crib sheet is a brief set of notes used for quick reference. Cheat sheets are so named because the people may use it without no prior knowledge.
+Git Flow
+
+GitFlow is a branching model for Git, developed by Vincent Driessen. It is very well organized to collaborate and scale the development team. Git flow is a collection of Git commands. It accomplishes many repository operations with just single commands.
+Git Squash
+
+In Git, the term squash is used to squash previous commits into one. Git squash is an excellent technique to group-specific changes before forwarding them to others. You can merge several commits into a single commit with the powerful interactive rebase command.
+Git Rm
+
+In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
+Git Fork
+
+A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project.
+
+Great use of using forks to propose changes for bug fixes. To resolve an issue for a bug that you found, you can:
+
+    Fork the repository.
+    Make the fix.
+    Forward a pull request to the project owner.
+Basic Git Commands
+
+Here is a list of most essential Git commands that are used daily.
+
+    Git Config command
+    Git init command
+    Git clone command
+    Git add command
+    Git commit command
+    Git status command
+    Git push Command
+    Git pull command
+    Git Branch Command
+    Git Merge Command
+    Git log command
+    Git remote command
+
+Let's understand each command in detail.
+Git config command
+
+This command configures the user. The Git config command is the first and necessary command used on the Git command line. This command sets the author name and email address to be used with your commits. Git config is also used in other scenarios.
+
+Syntax
+
+    $ git config --global user.name "srinivas"  
+    $ git config --global user.email "srinivasxyz@gmail.com"  
+
+Git Init command
+
+This command is used to create a local repository.
+
+Syntax
+
+    $ git init Demo  
+
+The init command will initialize an empty repository. See the below screenshot.
+Git Commands
+Git clone command
+
+This command is used to make a copy of a repository from an existing URL. If I want a local copy of my repository from GitHub, this command allows creating a local copy of that repository on your local directory from the repository URL.
+
+Syntax
+
+    $ git clone URL  
+
+Git Commands
+Git add command
+
+This command is used to add one or more files to staging (Index) area.
+
+Syntax
+
+To add one file
+
+    $ git add Filename  
+
+To add more than one file
+
+    $ git add*  
+
+Git Commands
+Git commit command
+
+Commit command is used in two scenarios. They are as follows.
+
+Git commit -m
+
+This command changes the head. It records or snapshots the file permanently in the version history with a message.
+
+Syntax
+
+    $ git commit -m " Commit Message"  
+
+Git commit -a
+
+This command commits any files added in the repository with git add and also commits any files you've changed since then.
+
+Syntax
+
+    $ git commit -a  
+
+Git Commands
+Git status command
+
+The status command is used to display the state of the working directory and the staging area. It allows you to see which changes have been staged, which haven't, and which files aren?t being tracked by Git. It does not show you any information about the committed project history. For this, you need to use the git log. It also lists the files that you've changed and those you still need to add or commit.
+
+Syntax
+
+    $ git status  
+
+Git Commands
+Git push Command
+
+It is used to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repo. It's the complement to git fetch, but whereas fetching imports commits to local branches on comparatively pushing exports commits to remote branches. Remote branches are configured by using the git remote command. Pushing is capable of overwriting changes, and caution should be taken when pushing.
+
+Git push command can be used as follows.
+
+Git push origin master
+
+This command sends the changes made on the master branch, to your remote repository.
+
+Syntax
+
+    $ git push [variable name] master  
+
+Git Commands
+Git Commands
+Git Commands
+Git Commands
+
+Git push -all
+
+This command pushes all the branches to the server repository.
+
+Syntax
+
+    $ git push --all  
+
+Git Commands
+Git pull command
+
+Pull command is used to receive data from GitHub. It fetches and merges changes on the remote server to your working directory.
+
+Syntax
+
+    $ git pull URL  
+
+Git Commands
+Git Branch Command
+
+This command lists all the branches available in the repository.
+
+Syntax
+
+    $ git branch  
+
+Git Commands
+Git Merge Command
+
+This command is used to merge the specified branch?s history into the current branch.
+
+Syntax
+
+    $ git merge BranchName  
+
+Git Commands
+Git log Command
+
+This command is used to check the commit history.
+
+Syntax
+
+    $ git log  
+
+Git Commands
+
+By default, if no argument passed, Git log shows the most recent commits first. We can limit the number of log entries displayed by passing a number as an option, such as -3 to show only the last three entries.
+
+    $ git log -3  
+
+Git remote Command
+
+Git Remote command is used to connect your local repository to the remote server. This command allows you to create, view, and delete connections to other repositories. These connections are more like bookmarks rather than direct links into other repositories. This command doesn't provide real-time access to repositories.
+Git Commands
+
+
+Git Flow / Git Branching Model
+
+Git flow is the set of guidelines that developers can follow when using Git. We cannot say these guidelines as rules. These are not the rules; it is a standard for an ideal project. So that a developer would easily understand the things.
+
+It is referred to as Branching Model by the developers and works as a central repository for a project. Developers work and push their work to different branches of the main repository.
+Every branch has its meaning and standard. Let's understand each branch and its usage.
+The Main Branches
+
+Two of the branching model's branches are considered as main branches of the project. These branches are as follows:
+
+    master
+    develop
+Master Branch
+
+The master branch is the main branch of the project that contains all the history of final changes. Every developer must be used to the master branch. The master branch contains the source code of HEAD that always reflects a final version of the project.
+
+Your local repository has its master branch that always up to date with the master of a remote repository.
+
+It is suggested not to mess with the master. If you edited the master branch of a group project, your changes would affect everyone else, and very quickly, there will be merge conflicts.
+Develop Branch
+
+It is parallel to the master branch. It is also considered as the main branch of the project. This branch contains the latest delivered development changes for the next release. It has the final source code for the release. It is also called as a "integration branch."
+
+When the develop branch reaches a stable point and is ready to release, it should be merged with master and tagged with a release version.
+Supportive Branches
+
+The development model needs a variety of supporting branches for the parallel development, tracking of features, assist in quick fixing and release, and other problems. These branches have a limited lifetime and are removed after the uses.
+
+The different types of supportive branches, we may use are as follows:
+
+    Feature branches
+    Release branches
+    Hotfix branches
+
+Each of these branches is made for a specific purpose and have some merge targets. These branches are significant for a technical perspective.
+Feature Branches
+
+Feature branches can be considered as topic branches. It is used to develop a new feature for the next version of the project. The existence of this branch is limited; it is deleted after its feature has been merged with develop branch.
+
+
+Git Cheat Sheet
+1. Git configuration
+
+    Git config
+    Get and set configuration variables that control all facets of how Git looks and operates.
+    Set the name:
+    $ git config --global user.name "User name"
+    Set the email:
+    $ git config --global user.email "himanshudubey481@gmail.com"
+    Set the default editor:
+    $ git config --global core.editor Vim
+    Check the setting:
+    $ git config -list
+    Git alias
+    Set up an alias for each command:
+    $ git config --global alias.co checkout
+    $ git config --global alias.br branch
+    $ git config --global alias.ci commit
+    $ git config --global alias.st status
+
+2. Starting a project
+
+    Git init
+    Create a local repository:
+    $ git init
+    Git clone
+    Make a local copy of the server repository.
+    $ git clone
+
+3. Local changes
+
+    Git add
+    Add a file to staging (Index) area:
+    $ git add Filename
+    Add all files of a repo to staging (Index) area:
+    $ git add*
+    Git commit
+    Record or snapshots the file permanently in the version history with a message.
+    $ git commit -m " Commit Message"
+
+4. Track changes
+
+    Git diff
+    Track the changes that have not been staged: $ git diff
+    Track the changes that have staged but not committed:
+    $ git diff --staged
+    Track the changes after committing a file:
+    $ git diff HEAD
+    Track the changes between two commits:
+    $ git diff Git Diff Branches:
+    $ git diff < branch 2>
+    Git status
+    Display the state of the working directory and the staging area.
+    $ git status
+    Git show Shows objects:
+    $ git show
+
+5. Commit History
+
+    Git log
+    Display the most recent commits and the status of the head:
+    $ git log
+    Display the output as one commit per line:
+    $ git log -oneline
+    Displays the files that have been modified:
+    $ git log -stat
+    Display the modified files with location:
+    $ git log -p
+    Git blame
+    Display the modification on each line of a file:
+    $ git blame <file name>
+
+6. Ignoring files
+
+    .gitignore
+    Specify intentionally untracked files that Git should ignore. Create .gitignore:
+    $ touch .gitignore List the ignored files:
+    $ git ls-files -i --exclude-standard
+
+7. Branching
+
+    Git branch Create branch:
+    $ git branch List Branch:
+    $ git branch --list Delete a Branch:
+    $ git branch -d Delete a remote Branch:
+    $ git push origin -delete Rename Branch:
+    $ git branch -m
+    Git checkout
+    Switch between branches in a repository.
+    Switch to a particular branch:
+    $ git checkout
+    Create a new branch and switch to it:
+    $ git checkout -b Checkout a Remote branch:
+    $ git checkout
+    Git stash
+    Switch branches without committing the current branch. Stash current work:
+    $ git stash
+    Saving stashes with a message:
+    $ git stash save ""
+    Check the stored stashes:
+    $ git stash list
+    Re-apply the changes that you just stashed:
+    $ git stash apply
+    Track the stashes and their changes:
+    $ git stash show
+    Re-apply the previous commits:
+    $ git stash pop
+    Delete a most recent stash from the queue:
+    $ git stash drop
+    Delete all the available stashes at once:
+    $ git stash clear
+    Stash work on a separate branch:
+    $ git stash branch
+    Git cherry pic
+    Apply the changes introduced by some existing commit:
+    $ git cherry-pick
+
+8. Merging
+
+    Git merge
+    Merge the branches:
+    $ git merge
+    Merge the specified commit to currently active branch:
+    $ git merge
+    Git rebase
+    Apply a sequence of commits from distinct branches into a final commit.
+    $ git rebase
+    Continue the rebasing process:
+    $ git rebase -continue Abort the rebasing process:
+    $ git rebase --skip
+    Git interactive rebase
+    Allow various operations like edit, rewrite, reorder, and more on existing commits.
+    $ git rebase -i
+
+9. Remote
+
+    Git remote
+    Check the configuration of the remote server:
+    $ git remote -v
+    Add a remote for the repository:
+    $ git remote add Fetch the data from the remote server:
+    $ git fetch
+    Remove a remote connection from the repository:
+    $ git remote rm
+    Rename remote server:
+    $ git remote rename
+    Show additional information about a particular remote:
+    $ git remote show
+    Change remote:
+    $ git remote set-url
+    Git origin master
+    Push data to the remote server:
+    $ git push origin master Pull data from remote server:
+    $ git pull origin master
+
+10. Pushing Updates
+
+    Git push
+    Transfer the commits from your local repository to a remote server. Push data to the remote server:
+    $ git push origin master Force push data:
+    $ git push -f
+    Delete a remote branch by push command:
+    $ git push origin -delete edited
+
+11. Pulling updates
+
+    Git pull
+    Pull the data from the server:
+    $ git pull origin master
+    Pull a remote branch:
+    $ git pull
+    Git fetch
+    Download branches and tags from one or more repositories. Fetch the remote repository:
+    $ git fetch< repository Url> Fetch a specific branch:
+    $ git fetch
+    Fetch all the branches simultaneously:
+    $ git fetch -all
+    Synchronize the local repository:
+    $ git fetch origin
+
+12. Undo changes
+
+    Git revert
+    Undo the changes:
+    $ git revert
+    Revert a particular commit:
+    $ git revert
+    Git reset
+    Reset the changes:
+    $ git reset -hard
+    $ git reset -soft:
+    $ git reset --mixed
+
+13. Removing files
+
+    Git rm
+    Remove the files from the working tree and from the index:
+    $ git rm <file Name>
+    Remove files from the Git But keep the files in your local repository:
+    $ git rm --cached
+
